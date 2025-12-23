@@ -1,0 +1,6 @@
+Feature,Standard Vector DB,Provenance-Aware DB (ProvSEEK),Confidential DB (TEE)
+Indexing,Semantic Similarity,Semantic + Provenance Sig,Encrypted RAM
+Ingest Logic,Open / API Key,Signature Verification,Remote Attestation
+Retrieval Logic,Top-K Neighbors,Filtered (Signed Only),Enclave Decryption
+Data Poisoning Risk,High,Low,Very Low
+Key Management,Server-Side Keys,VRF-Derived Per Chunk,Hardware-Derived

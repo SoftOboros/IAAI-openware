@@ -1,0 +1,4 @@
+Layer,Technology,Purpose,"""Unfakeable"" Property"
+1. The Core,VDKD Watermarking,Embed identity into pixels.,The watermark key is mathematically derived from the Creator's Private Key.
+2. The Seal,C2PA Manifest,Standardized Metadata.,"Provides the public display of history (edits, location) signed by the creator. "
+3. The Wrapper,Hybrid Signcryption,Access Control.,Requires the user to mechanically verify the Creator's Public Key to view the file.
