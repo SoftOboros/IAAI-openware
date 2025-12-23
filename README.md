@@ -28,8 +28,8 @@ The working groups proposed within this repository are exercises in bootstrappin
 
 The current proposed working groups are:
 
--   [Provenance](/working-groups/proposed/Provenance/README.md)
--   [Vendor-Agnostic API](/working-groups/proposed/Vendor-Agnostic-API/README.md)
+-   [Provenance](./working-groups/proposed/Provenance/README.md)
+-   [Vendor-Agnostic API](./working-groups/proposed/Vendor-Agnostic-API/README.md)
 
 ---
 
@@ -41,7 +41,7 @@ The core concept is the formation of a standards body itself. The initial state 
 
 ## Table of Contents
 
-For a full overview of the documents in this repository, please see the [Table of Contents](/TABLE_OF_CONTENTS.md).
+For a full overview of the documents in this repository, please see the [Table of Contents](./TABLE_OF_CONTENTS.md).
 
 ---
 
