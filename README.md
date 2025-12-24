@@ -40,12 +40,6 @@ The core concept is the formation of a standards body itself. The initial state 
 
 ---
 
-## Table of Contents
-
-For a full overview of the documents in this repository, please see the [Table of Contents](./TABLE_OF_CONTENTS.md).
-
----
-
 ## Relationship to IAAI Foundation
 
 -   This repository is **open** and standalone, intended to facilitate the formation of an independent standards body.
