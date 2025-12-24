@@ -1,0 +1,39 @@
+### Glossary of API Standardization Terms
+
+This glossary defines key terms related to modern AI API standards, like the proposed AI API Provenance Extension (AIPE) and the "Dream API" specification. Understanding these concepts provides a foundational vocabulary for anyone new to the challenges of creating trustworthy and interoperable artificial intelligence systems.
+
+##### 1\. API (Application Programming Interface)
+
+An API is an interface that allows different software applications to communicate with each other, specifically in the context of accessing AI models.In the current AI landscape, the proliferation of models has created what the source material calls an "unkempt jungle" of APIs. Developers must navigate a maze of different data structures (schemas) and communication rules (protocols) for each AI provider, such as OpenAI, Google, and Anthropic. This fragmentation makes it difficult to switch between models or build applications that work across different platforms. The goal of a "Dream API" is to solve this problem by creating a single, standardized interface that allows developers to interact with any AI model using a common language.While a standard API solves the  *interoperability*  problem, a different class of standards is needed to solve the  *trust*  problem. Securing the content flowing through these interfaces relies on methods like C2PA, which establishes verifiable authenticity.
+
+##### 2\. C2PA (Coalition for Content Provenance and Authenticity)
+
+C2PA is a standard for providing verifiable, tamper-evident provenance for digital media, such as images and videos, by attaching cryptographic metadata.It works by attaching metadata that proves who created a piece of content and whether it has been altered. Its core mechanism includes:
+
+* **Attaches a Manifest:**  It embeds a non-intrusive "manifest" into the file, which contains a digital signature and a history of the content's creation and edits.  
+* **Ensures Tamper-Evidence:**  It uses "hard bindings"—cryptographic hashes of the content's data—to link the manifest to the file. If even a single pixel is changed, the hash will no longer match, proving that the content has been tampered with.  
+* **Preserves Accessibility:**  The key benefit of C2PA is explained with the analogy of a  **"Digital Vellum" vs. a "Locked Box."**  Unlike encryption (the locked box), C2PA does not hide the content. If the C2PA signature becomes invalid or is lost, the content itself remains perfectly accessible and readable, just like writing on vellum. With encryption, if the key is lost, the content is lost forever.The cryptographic foundation that enables C2PA's "Digital Vellum" approach is the  **Digital Signature** , a tool designed specifically for proving authenticity without demanding secrecy.
+
+##### 3\. Digital Signature
+
+A digital signature is a cryptographic technique used to prove the authenticity, integrity, and non-repudiation of digital content.Within the AIPE standards debate, the distinction between using a digital signature for authenticity and using encryption for confidentiality is critical. The following table contrasts the two approaches based on the source context.| Feature | Digital Signature | Encryption || \------ | \------ | \------ || **Primary Goal** | **Authenticity**  (Proving who created it and that it hasn't been changed) | **Confidentiality**  (Keeping the content secret) || **Analogy** | A tamper-proof wax seal on a letter. | A locked box that requires a key to open. || **Impact of Key Loss** | The  *content*  remains readable, but the  *proof of origin*  is lost. | The  *content*  becomes permanently inaccessible ("Cryptographic Shredding"). || **Use in AIPE** | The recommended default method (Tier 5.1) for public content. | A specialized option (Tier 5.4) for high-security, confidential content. |  
+While digital signatures masterfully solve for authenticity, they do not provide secrecy. For that, the AIPE debate considered their cryptographic counterpart:  **Encryption** .
+
+##### 4\. Encryption
+
+Encryption is the process of converting data into a code (ciphertext) to prevent unauthorized access.The primary purpose of encryption is to enforce  **secrecy** . In the AIPE standards debate, the initial "encryption-first" approach was heavily criticized because it confused the need for authenticity with the need for secrecy. This approach introduced the severe risk of a "Digital Dark Age," a scenario where vast amounts of historical and cultural data could become permanently unreadable if the decryption keys were lost or became obsolete.Beyond the long-term risk of a "Digital Dark Age," the encryption-first approach was also challenged on practical grounds due to its immediate and severe impact on application performance, measured as  **Latency** .
+
+##### 5\. Latency
+
+Latency is the delay between a request being sent to an AI model and the response beginning to arrive. Lower latency means a more responsive, real-time user experience.The practical impact of latency is significant. A standard RAG chat application operates on a tight latency budget of  **500-800 milliseconds**  for a complete, end-to-end response. The debate over the AIPE standard highlighted that the decryption process alone could add  **200-400 milliseconds**  of latency. This would consume most of the application's performance budget before the AI model even begins generating its answer, making the application feel sluggish and unresponsive to the user.This severe performance penalty is central to the debate over the best way to establish  **Provenance**  for the hundreds of documents a RAG system might retrieve in a single query.
+
+##### 6\. Provenance
+
+Provenance is the verified history of a piece of digital content, proving  **where it came from (origin)**  and that it  **has not been altered (integrity)** .According to the source documents, provenance is a "necessary but insufficient condition for trust." This means that while it can prove a document came from a specific source and is unchanged, it does not prove that the information  *within*  the document is truthful or accurate. The AIPE documents outline two primary approaches to establishing provenance:
+
+* **Signature-Based Provenance:**  Emphasizes  *authenticity* . It uses digital signatures (like C2PA) to verify origin without hiding the content. This is the default approach for public content and performance-critical applications like RAG.  
+* **Encryption-Based Provenance:**  Emphasizes  *confidentiality* . It wraps content in a cryptographic shell, so it cannot be read without first being verified. This is reserved for specialized, high-security use cases.This choice between signature-based and encryption-based provenance is not academic; it directly impacts the performance and trustworthiness of core AI techniques like  **RAG (Retrieval-Augmented Generation)** , which rely on rapidly verifying large volumes of source material.
+
+##### 7\. RAG (Retrieval-Augmented Generation)
+
+RAG is an AI technique where a model, before answering a prompt, first  **retrieves**  relevant information from an external knowledge base (like a vector database).This process helps AI models generate more accurate, timely, and trustworthy responses by grounding them in specific, verifiable data instead of relying solely on their internal training. In a typical RAG process, the system fetches a large number of candidate documents (e.g., k=100 to k=500) and uses them as context to formulate the final answer. As a foundational technique for enterprise AI, RAG's success hinges on the very concepts defined here: low  **Latency**  to ensure a responsive user experience, and verifiable  **Provenance** —typically established via  **Digital Signatures**  (like C2PA) over  **Encryption** —to ensure the trustworthiness of the source material.  
