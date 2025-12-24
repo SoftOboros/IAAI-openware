@@ -2,7 +2,11 @@
 
 #### 1.0 Introduction: The Analog Imperative and the Standardization Bottleneck
 
-As artificial intelligence models scale exponentially, the semiconductor industry is confronting a fundamental barrier to progress: the von Neumann "memory wall." In conventional digital architectures, the energy and latency costs of moving synaptic weights and activation data between memory and processing units now dominate the system's power budget, consuming orders of magnitude more energy than the computation itself. This data movement bottleneck is becoming the primary inhibitor of deploying large-scale AI, especially in energy-constrained environments.Analog In-Memory Computing (AIMC) has emerged as the definitive architectural solution to this crisis. By embedding computation directly within memory arrays, AIMC circumvents the data movement bottleneck. This paradigm leverages the physical laws of Ohm and Kirchhoff to perform massively parallel matrix-vector multiplication—the core of all neural network operations—in a single time step, delivering orders-of-magnitude gains in energy efficiency.While AIMC technology is maturing rapidly across a diverse range of physical substrates, its path to broad commercial adoption is obstructed. The lack of industry-wide signal, metrology, and interface standards is now the single greatest barrier to ecosystem development and interoperability. Without a common language to define, measure, and control analog hardware, the industry risks fragmentation into a collection of proprietary, incompatible solutions. This proposal outlines a comprehensive, cross-technology standardization framework for bodies like JEDEC and IEEE, aimed at ensuring the reliable, scalable, and certifiable deployment of analog AI. To build this framework, we must first establish the common principles that make such an effort feasible.
+As artificial intelligence models scale exponentially, the semiconductor industry is confronting a fundamental barrier to progress: the von Neumann "memory wall." In conventional digital architectures, the energy and latency costs of moving synaptic weights and activation data between memory and processing units now dominate the system's power budget, consuming orders of magnitude more energy than the computation itself. This data movement bottleneck is becoming the primary inhibitor of deploying large-scale AI, especially in energy-constrained environments.Analog In-Memory Computing (AIMC) has emerged as the definitive architectural solution to this crisis. By embedding computation directly within memory arrays, AIMC circumvents the data movement bottleneck. 
+
+This paradigm leverages the physical laws of Ohm and Kirchhoff to perform massively parallel matrix-vector multiplication—the core of all neural network operations—in a single time step, delivering orders-of-magnitude gains in energy efficiency.While AIMC technology is maturing rapidly across a diverse range of physical substrates, its path to broad commercial adoption is obstructed. The lack of industry-wide signal, metrology, and interface standards is now the single greatest barrier to ecosystem development and interoperability. Without a common language to define, measure, and control analog hardware, the industry risks fragmentation into a collection of proprietary, incompatible solutions.
+
+This proposal outlines a comprehensive, cross-technology standardization framework for bodies like JEDEC and IEEE, aimed at ensuring the reliable, scalable, and certifiable deployment of analog AI. To build this framework, we must first establish the common principles that make such an effort feasible.
 
 #### 2.0 The Foundation for Standardization: Universal Principles Across Diverse Technologies
 
@@ -17,7 +21,14 @@ All analog AI hardware shares a universal computational model that is fundamenta
 
 ##### 2.2 Universal State Variables
 
-Despite their different materials and mechanisms, all leading analog memory technologies encode weights as continuous physical state variables. This convergence on a common functional abstraction provides a clear target for standardization.| Technology | State Variable | Physical Mechanism || \------ | \------ | \------ || **ReRAM/RRAM** | Filament conductance | Oxygen vacancy migration || **PCM** | Crystalline-amorphous ratio | Chalcogenide phase transition || **FeFET** | Remnant polarization (P\_r) | Ferroelectric domain switching || **Flash/SONOS** | Trapped charge (Q) | Fowler-Nordheim tunneling |
+Despite their different materials and mechanisms, all leading analog memory technologies encode weights as continuous physical state variables. This convergence on a common functional abstraction provides a clear target for standardization.
+
+| Technology | State Variable | Physical Mechanism |
+| :---- | :---- | :---- |
+| **ReRAM/RRAM** | Filament conductance | Oxygen vacancy migration |
+| **PCM** | Crystalline-amorphous ratio | Chalcogenide phase transition |
+| **FeFET** | Remnant polarization (P\_r) | Ferroelectric domain switching |
+| **Flash/SONOS** | Trapped charge (Q) | Fowler-Nordheim tunneling |
 
 ##### 2.3 Universal Challenges
 
