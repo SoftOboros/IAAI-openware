@@ -28,6 +28,7 @@ The working groups proposed within this repository are exercises in bootstrappin
 
 The current proposed working groups are:
 
+-   [Analog](./working-groups/proposed/Analog/README.md)
 -   [Provenance](./working-groups/proposed/Provenance/README.md)
 -   [Vendor-Agnostic API](./working-groups/proposed/Vendor-Agnostic-API/README.md)
 

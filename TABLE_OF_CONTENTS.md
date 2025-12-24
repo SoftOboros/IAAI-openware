@@ -8,6 +8,9 @@ This document provides a structured overview of the IAAI Openware repository.
 
 ## Working Groups
 
+### Analog
+- [Analog Working Group](./working-groups/proposed/Analog/README.md): Standards and discussion on analog AI hardware technologies, memory-based computing architectures, and weight encoding methods.
+
 ### Provenance
 - [Provenance Working Group](./working-groups/proposed/Provenance/README.md): Standards and discussion on data provenance, cryptographic verification, and secure architectures for AI systems.
 
