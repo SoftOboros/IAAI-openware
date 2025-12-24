@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img src="./Unfakable-Data_Securing-AI-with-Enforced-Provenance.png" alt="IAAI: Unfakable Data: Securing AI with Enforced Provenance">
+</p>
+
 # Provenance Working Group
 
 This working group focuses on data provenance, cryptographic verification, and secure architectures for AI systems.
