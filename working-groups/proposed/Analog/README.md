@@ -6,6 +6,30 @@
 
 This working group focuses on analog AI hardware technologies, including memory-based computing architectures, weight encoding methods, and emerging analog AI accelerator standards.
 
+## Introduction Video
+[AI's Next Leap](./Education__AI_s_Next_Leap.mp4)
+
+We are hitting a wall. As AI models scale to trillions of parameters, the energy cost of moving data between memory and processors is becoming unsustainable. The solution isn't just better software—it's a fundamental shift in physics.
+
+In this deep dive, we explore Analog In-Memory Computing (AIMC)—the paradigm shift that embeds computation directly into memory arrays. We discuss why digital hardware is reaching its limit and how technologies like Phase-Change Memory (PCM) and ReRAM are opening the door to the next generation of energy-efficient AI.
+
+This isn't just theory. We are also sharing our open research on the Unified Signal & Metrology Standards, a proposed framework to standardize how we measure, report, and certify these probabilistic devices.
+
+[Key Topics]
+
+The "Memory Wall" crisis in current AI hardware.
+
+Digital vs. Analog Weight Encoding.
+
+The physics of PCM and ReRAM.
+
+Why we need new standards for "Probabilistic Computing."
+
+📂 [Access the Full Research Notebook:](https://notebooklm.google.com/notebook/cb8cce70-c490-495b-bde8-03d926d78bac)
+
+Use this notebook to chat with the source documents, citation-backed research, and technical drafts referenced in this video.
+
+
 ## Table of Contents
 
 ### **Overview & Foundational Documents**
